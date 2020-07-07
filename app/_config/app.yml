@@ -1,13 +1,11 @@
 ---
-Name: myproject
+Name: StereoClub
 ---
 SilverStripe\Core\Manifest\ModuleManifest:
   project: app
-
-
 ---
 Name: my-project-assetsflysystem
-After: '#assetsflysystem'
+After: "#assetsflysystem"
 ---
 # SilverStripe 4.4 changes the way files are resolved. `silverstripe-assets` resolves files using a variety of formats
 # by default. When starting a brand new project on SilverStripe 4.4 or greater, those extra formats are not needed and
