@@ -29,10 +29,10 @@ class PageController extends ContentController
     {
         parent::init();
         Requirements::themedCSS("common/bootstrap.min");
-        Requirements::themedCSS("style");
-        Requirements::themedJavascript("common/modernizr");
+        Requirements::themedCSS("common/bootstrap-grid.min");
+        Requirements::themedCSS("common/bootstrap-reboot.min");
+        Requirements::css('css/style.scss');
         Requirements::themedJavascript("common/bootstrap.min");
-        Requirements::themedJavascript("common/bootstrap-reboot");
-        Requirements::themedJavascript("scripts");
+        Requirements::themedJavascript("script");
     }
 }
