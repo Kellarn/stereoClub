@@ -1,6 +1,6 @@
 <?php
 
-namespace StereoClub{
+namespace StereoClub;
 
 use SilverStripe\ORM\DataExtension;
 use SilverStripe\Forms\FieldList;
@@ -28,5 +28,4 @@ class SiteConfigExtension extends DataExtension
         ));
         $fields->addFieldsToTab('Root.Main', TextareaField::create('FooterContent', 'Content for footer'));
     }
-}
 }

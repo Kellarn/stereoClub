@@ -1,6 +1,6 @@
 <?php
 
-namespace SilverStripe\Lessons;
+namespace StereoClub\Drinks;
 
 use SilverStripe\Forms\DateField;
 use SilverStripe\ORM\DataObject;
@@ -16,7 +16,7 @@ use SilverStripe\Assets\Image;
 use SilverStripe\Forms\TabSet;
 use SilverStripe\Versioned\Versioned;
 
-class Property extends DataObject
+class Drink extends DataObject
 {
 
     private static $db = [
@@ -28,6 +28,7 @@ class Property extends DataObject
 
     private static $has_one = [
         'PrimaryPhoto' => Image::class,
+        'DrinksPage' => DrinksPage::class,
     ];
 
     private static $summary_fields = [
