@@ -1,4 +1,4 @@
-<div class="content">
+<div class="MainPage__content">
     <div class="container">
         <div class="row">
 	        <article>
@@ -6,15 +6,15 @@
 		        <div class="content">$Content</div>
 	        </article>
         </div>
-        <div class="main">
+        <div class="MainPage__content__main">
 		    <div class="row">
             <% loop $Drinks %>
-            <div class="item col-md"><!-- Set width to 4 columns for grid view mode only -->
+            <div class="item col-4"><!-- Set width to 4 columns for grid view mode only -->
                 <h3>
                     <a href="#">$Title</a>
                 </h3>
                 <div class="image image-large">
-                    $PrimaryPhoto.Fit(720,255)
+                    $PrimaryPhoto.ScaleWidth(300)
                 </div>
                 <div class="description">
                     <p>$Description</p>

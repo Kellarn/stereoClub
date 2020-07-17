@@ -1,11 +1,28 @@
+* {
+    font-size: 16px;
+}
 body {
-    #wrapper {
-        header {
-            background: gray;
-            #top-image {
+    color: white;
+    background: #1d1f21;
+    text-align: center;
+    p {
+        font-size: 1rem;
+    }
+    .MainPage {
+        &__header {
+            background: #272727;
+            &__top-image {
                 img {
                     padding-top: 10px;
                     margin-bottom: -35px;
+                }
+            }
+        }
+        &__content {
+            margin-top: 40px;
+            &__main {
+                img {
+                    width: 100%;
                 }
             }
         }

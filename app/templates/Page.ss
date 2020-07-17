@@ -19,8 +19,8 @@
 	<link href="http://fonts.googleapis.com/css?family=Raleway:300,500,900%7COpen+Sans:400,700,400italic" rel="stylesheet" type="text/css" />
 </head>
 <body>
-	<div id="wrapper">
-		<header id="header">
+	<div class="MainPage">
+		<header class="MainPage__header">
 			<% include TopImage %>			
 		</header>
 		$Layout		

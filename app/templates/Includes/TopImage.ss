@@ -1,4 +1,4 @@
-	<div id="top-image" >
+	<div class="MainPage__header__top-image" >
 				<div class="container">
 					<div class="row">
 						<div class="col-sm-12">
