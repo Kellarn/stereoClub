@@ -21,8 +21,32 @@ body {
         &__content {
             margin-top: 40px;
             &__main {
-                img {
-                    width: 100%;
+                .item {
+                    margin-top: 20px;
+                }
+                .card {
+                    background: #1d1f21;
+                    border: none;
+                    .card-img-overlay {
+                        text-align: left;
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        .card-title {
+                            font-size: 0.8rem;
+                            font-weight: bold;
+                        }
+                        .card-text {
+                            font-size: 0.7rem;
+                            text-align: left;
+                        }
+                    }
+                    .card-body {
+                        .card-text {
+                            color: #8b826f;
+                            font-size: 0.7rem;
+                        }
+                    }
                 }
             }
         }

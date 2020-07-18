@@ -23,6 +23,7 @@ class Drink extends DataObject
         'Title' => 'Varchar',
         'Price' => 'Currency',
         'Description' => 'Text',
+        'Ingredients' => 'Text'
     ];
 
 
@@ -35,6 +36,7 @@ class Drink extends DataObject
         'Title' => 'Title',
         'Description' => 'Description',
         'Price.Nice' => 'Price',
+        'Ingredients' => 'Ingredients'
     ];
 
     private static $owns = [
@@ -78,6 +80,7 @@ class Drink extends DataObject
             TextField::create('Title'),
             TextareaField::create('Description'),
             CurrencyField::create('Price'),
+            TextareaField::create('Ingredients'),
         ]);
         $fields->addFieldToTab('Root.Photos', $upload = UploadField::create(
             'PrimaryPhoto',
