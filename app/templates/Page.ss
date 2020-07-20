@@ -21,10 +21,13 @@
 <body>
 	<div class="MainPage">
 		<header class="MainPage__header">
-			<% include TopImage %>			
+			<% include TopImage %>	
 		</header>
-		$Layout		
-		<% include Footer %>	
+		$Layout	
+		<div class="MainPage__bottom">
+			<% include BottomSection %>			
+			<% include Footer %>
+		</div>	
 	</div>
 </body>
 </html>
