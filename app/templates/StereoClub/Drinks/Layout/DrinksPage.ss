@@ -9,7 +9,7 @@
         <div class="MainPage__content__main">
 		    <div class="row">
             <% loop $Results %>
-            <div class="item col-4"><!-- Set width to 4 columns for grid view mode only -->
+            <div class="item col-xl-4 col-md-6 col-sm-12"><!-- Set width to 4 columns for grid view mode only -->
                 <div class="card">
                     <img class="card-img" src="$PrimaryPhoto.ScaleWidth(750).URL" alt="$PrimaryPhoto.Title">
                     <div class="card-img-overlay">
