@@ -28,22 +28,22 @@
         <% if $Results.MoreThanOnePage %>
         <div class="pagination">
             <% if $Results.NotFirstPage %>
-            <ul id="previous col-xs-6">
-                <li><a href="$Results.PrevLink"><i class="fa fa-chevron-left"></i></a></li>
+            <ul class="previous col-xs-6">
+                <li><a href="$Results.PrevLink"><i class="fa fa-chevron-left"></i>Previous</a></li>
             </ul>
             <% end_if %>
-            <ul class="hidden-xs">
+            <ul class="hidden-xs pages">
             <% loop $Results.Pages %>
                 <li <% if $CurrentBool %>class="active"<% end_if %>><a href="$Link">$PageNum</a></li>
             <% end_loop %>
             </ul>
             <% if $Results.NotLastPage %>
-            <ul id="next col-xs-6">
-                <li><a href="$Results.NextLink"><i class="fa fa-chevron-right"></i></a></li>
+            <ul class="next col-xs-6">
+                <li><a href="$Results.NextLink">Next<i class="fa fa-chevron-right"></i></a></li>
             </ul>
             <% end_if %>
         </div>
         <% end_if %>
-<       !-- END PAGINATION -->
+        <!-- END PAGINATION -->
     </div>
 </div>
