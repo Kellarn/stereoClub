@@ -49,30 +49,6 @@ class Drink extends DataObject
 
     private static $versioned_gridfield_extensions = true;
 
-    // public function searchableFields()
-    // {
-    //     return [
-    //         'Title' => [
-    //             'filter' => 'PartialMatchFilter',
-    //             'title' => 'Title',
-    //             'field' => TextField::class,
-    //         ],
-    //         'RegionID' => [
-    //             'filter' => 'ExactMatchFilter',
-    //             'title' => 'Region',
-    //             'field' => DropdownField::create('RegionID')
-    //                 ->setSource(
-    //                     Region::get()->map('ID','Title')
-    //                 )
-    //                 ->setEmptyString('-- Any region --')
-    //         ],
-    //         'FeaturedOnHomepage' => [
-    //             'filter' => 'ExactMatchFilter',
-    //             'title' => 'Only featured'
-    //         ]
-    //     ];
-    // }
-
     public function getCMSfields()
     {
         $fields = FieldList::create(TabSet::create('Root'));
