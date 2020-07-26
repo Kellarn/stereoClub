@@ -22,7 +22,7 @@ class DrinksPageController extends PageController
             $drinks,
             $request
         ) 
-        ->setPageLength(3)
+        ->setPageLength(6)
         ->setPaginationGetVar('s');
 
         return [
