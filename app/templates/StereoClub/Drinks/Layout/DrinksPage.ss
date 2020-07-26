@@ -1,4 +1,3 @@
-<% base_tag %>
 <div class="MainPage__content">
     <div class="container">
         <div class="row">
@@ -13,6 +12,14 @@
                     <% loop $SortingOptions %>
                         <li><a href="$Link">$Title</a></li>
                     <% end_loop %>
+                    <li>Current: </li>
+                     <% if $SortedByDate %>
+                <li> $SortedByDate</li>
+            <% else_if $SortedByPrice %>
+                <li> $SortedByPrice</li>
+                <% else %>
+                <li> Name </li>
+            <% end_if %>
                     </ul>
             </div>
 		    <div class="row">

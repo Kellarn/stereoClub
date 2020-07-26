@@ -23,40 +23,21 @@ class DrinksPageController extends PageController
     protected function init ()
     {
         parent::init();
-        $this->drinksList = Drink::get();
+        $this->drinksList = Drink::get()->sort('Title ASC');
     }
 
     public function sortedDate(HTTPRequest $r)
     {
+         $this->drinksList = $this->drinksList->sort('Date DESC');
+         return [
+            'SortedByDate' => 'Date'
+        ];
     }
     public function sortedPrice(HTTPRequest $r)
     {
-        // $year = $r->param('ID');
-        // $month = $r->param('OtherID');
-
-        // if(!$year) return $this->httpError(404);
-
-        // $startDate = $month ? "{$year}-{$month}-01" : "{$year}-01-01";
-
-        // if(strtotime($startDate) === false) {
-        //     return $this->httpError(404, 'Invalid date');
-        // }
-
-        // $adder = $month ? '+1 month' : '+1 year';
-        // $endDate = date('Y-m-d', strtotime(
-        //     $adder,
-        //     strtotime($startDate)
-        // ));
-
          $this->drinksList = $this->drinksList->sort('Price DESC');
-         echo $this->drinksList;
-
-        // return [
-        //     'StartDate' => DBField::create_field('Datetime', $startDate),
-        //     'EndDate' => DBField::create_field('Datetime', $endDate)
-        // ];
          return [
-            'SortedByPrice' => 'SortedByPrice'
+            'SortedByPrice' => 'Price'
         ];
     }
      public function PaginatedDrinks()

@@ -5,6 +5,7 @@ namespace StereoClub\Drinks;
 use SilverStripe\Forms\DateField;
 use SilverStripe\ORM\DataObject;
 use SilverStripe\Forms\FieldList;
+use SilverStripe\Forms\DatetimeField;
 use SilverStripe\Forms\TextField;
 use SilverStripe\Forms\TextareaField;
 use SilverStripe\Forms\DropdownField;
@@ -23,7 +24,8 @@ class Drink extends DataObject
         'Title' => 'Varchar',
         'Price' => 'Currency',
         'Description' => 'Text',
-        'Ingredients' => 'Text'
+        'Ingredients' => 'Text',
+        'Date' => 'Datetime',
     ];
 
 
@@ -52,6 +54,7 @@ class Drink extends DataObject
     public function getCMSfields()
     {
         $fields = FieldList::create(TabSet::create('Root'));
+        $fields->addFieldToTab('Root.Main', DatetimeField::create('Date','Date of creation'), 'Content');
         $fields->addFieldsToTab('Root.Main', [
             TextField::create('Title'),
             TextareaField::create('Description'),
