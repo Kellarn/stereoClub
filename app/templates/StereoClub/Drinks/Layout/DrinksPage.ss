@@ -7,13 +7,13 @@
 	        </article>
         </div>
         <div class="MainPage__content__main">
+        
+            <!-- BEGIN FILTER -->
             <div class="row sorting">
-                    <div class="sortBy"> 
-                        <p>Filter</p>
-                    </div>
-                    <div class="filterOptions">
-                        <i class="fa fa-ellipsis-v"></i>
-                    </div>
+                <div class="filterOptions"> 
+                    <p>Filter</p>
+                    <i class="fa fa-ellipsis-v"></i>
+                </div>
             </div>
             <div class"row">
                 <div class="sortingOptions">
@@ -32,9 +32,12 @@
                 </ul>
                 </div>
             </div>
+             <!-- END FILTER -->
+
+             <!-- BEGIN DRINKS CONTENT -->
 		    <div class="row">
             <% loop $PaginatedDrinks %>
-            <div class="item col-xl-4 col-md-6 col-sm-12"><!-- Set width to 4 columns for grid view mode only -->
+            <div class="item col-xl-4 col-md-6 col-sm-12">
                 <div class="card">
                     <img class="card-img" src="$PrimaryPhoto.ScaleWidth(750).URL" alt="$PrimaryPhoto.Title">
                     <div class="card-img-overlay">
@@ -48,27 +51,29 @@
                 </div>
             </div>
             <% end_loop %>
-        </div>
-        <!-- BEGIN PAGINATION -->
-        <% if $PaginatedDrinks.MoreThanOnePage %>
-        <div class="pagination">
-            <% if $PaginatedDrinks.NotFirstPage %>
-            <ul class="previous col-xs-6">
-                <li><a href="$PaginatedDrinks.PrevLink"><i class="fa fa-chevron-left"></i>Previous</a></li>
-            </ul>
+            </div>
+            <!-- END DRINKS CONTENT -->
+
+            <!-- BEGIN PAGINATION -->
+            <% if $PaginatedDrinks.MoreThanOnePage %>
+            <div class="pagination">
+                <% if $PaginatedDrinks.NotFirstPage %>
+                <ul class="previous col-xs-6">
+                    <li><a href="$PaginatedDrinks.PrevLink"><i class="fa fa-chevron-left"></i>Previous</a></li>
+                </ul>
+                <% end_if %>
+                <ul class="hidden-xs pages">
+                <% loop $PaginatedDrinks.Pages %>
+                    <li <% if $CurrentBool %>class="active"<% end_if %>><a href="$Link">$PageNum</a></li>
+                <% end_loop %>
+                </ul>
+                <% if $PaginatedDrinks.NotLastPage %>
+                <ul class="next col-xs-6">
+                    <li><a href="$PaginatedDrinks.NextLink">Next<i class="fa fa-chevron-right"></i></a></li>
+                </ul>
+                <% end_if %>
+            </div>
             <% end_if %>
-            <ul class="hidden-xs pages">
-            <% loop $PaginatedDrinks.Pages %>
-                <li <% if $CurrentBool %>class="active"<% end_if %>><a href="$Link">$PageNum</a></li>
-            <% end_loop %>
-            </ul>
-            <% if $PaginatedDrinks.NotLastPage %>
-            <ul class="next col-xs-6">
-                <li><a href="$PaginatedDrinks.NextLink">Next<i class="fa fa-chevron-right"></i></a></li>
-            </ul>
-            <% end_if %>
-        </div>
-        <% end_if %>
         <!-- END PAGINATION -->
     </div>
 </div>

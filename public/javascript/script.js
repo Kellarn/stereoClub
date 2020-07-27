@@ -7,14 +7,15 @@ jQuery.noConflict();
         });
     });
 })(jQuery);
+
 (function($) {
     $(document).ready(function() {
         if ($(".Date")[1]) {
-            // Do something if class exists
             $(".Date:last").toggleClass("notActive");
         } else if ($(".Price")[1]) {
             $(".Price:last").toggleClass("notActive");
-            // Do something if class does not exist
+        } else if ($(".Name")[1]) {
+            $(".Name:last").toggleClass("notActive");
         }
     });
 })(jQuery);

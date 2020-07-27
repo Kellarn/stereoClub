@@ -38,24 +38,28 @@ body {
                 min-height: 30px;
                 .sorting {
                     justify-content: flex-end;
+                    padding: 0 15px;
                     p {
                         margin-bottom: 0px;
                     }
                     .filterOptions {
-                        width: 10px;
                         height: 30px;
+                        display: flex;
                         margin-left: 5px;
                         &:hover {
                             cursor: pointer;
                         }
                         i {
+                            margin-left: 10px;
                             padding-top: 5px;
                         }
                     }
                 }
                 .sortingOptions {
                     display: none;
-
+                    a {
+                        text-decoration: none;
+                    }
                     &.active {
                         display: flex;
                         flex-direction: column;
@@ -73,11 +77,21 @@ body {
                             .notActive {
                                 display: none;
                             }
+                            li {
+                                a {
+                                    color: white;
+                                    width: 100%;
+                                    display: block;
+                                }
+                                &:first-child {
+                                    background: rgb(95, 93, 93);
+                                }
+                                &:hover {
+                                    background: rgb(95, 93, 93);
+                                }
+                            }
                         }
                     }
-                }
-                .item {
-                    margin-top: 20px;
                 }
                 .card {
                     background: #1d1f21;

@@ -31,6 +31,10 @@ class DrinksPage extends Page
             'Title' => 'Price',
             'Link' => $this->Link("/sortedPrice")
         ]));
+        $list->push(ArrayData::create([
+            'Title' => 'Name',
+            'Link' => $this->Link("/sortedName")
+        ]));
         return $list;
     }
 

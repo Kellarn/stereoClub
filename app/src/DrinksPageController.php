@@ -16,7 +16,8 @@ class DrinksPageController extends PageController
 {
     private static $allowed_actions = [
         'sortedDate',
-        'sortedPrice'
+        'sortedPrice',
+        'sortedName'
     ]; 
      protected $drinksList;
 
@@ -31,6 +32,13 @@ class DrinksPageController extends PageController
          $this->drinksList = $this->drinksList->sort('Date DESC');
          return [
             'SortedByDate' => 'Date'
+        ];
+    }
+     public function sortedName(HTTPRequest $r)
+    {
+         $this->drinksList = $this->drinksList->sort('Title ASC');
+         return [
+            'SortedByName' => 'Title'
         ];
     }
     public function sortedPrice(HTTPRequest $r)
