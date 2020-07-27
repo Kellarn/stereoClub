@@ -32,6 +32,7 @@ class PageController extends ContentController
         Requirements::themedCSS("common/bootstrap-grid.min");
         Requirements::themedCSS("common/bootstrap-reboot.min");
         Requirements::themedCSS("common/font-awesome.min");
+        Requirements::themedJavascript("common/jquery-3.5.1.min");
         Requirements::themedJavascript("common/bootstrap.min");
         Requirements::themedJavascript("script");
         Requirements::css('css/style.scss');

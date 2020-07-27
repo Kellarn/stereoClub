@@ -7,20 +7,30 @@
 	        </article>
         </div>
         <div class="MainPage__content__main">
-            <div class="row">
-                    <ul>
+            <div class="row sorting">
+                    <div class="sortBy"> 
+                        <p>Filter</p>
+                    </div>
+                    <div class="filterOptions">
+                        <i class="fa fa-ellipsis-v"></i>
+                    </div>
+            </div>
+            <div class"row">
+                <div class="sortingOptions">
+                <p>Sorting by </p>
+                <ul>
+                    <% if $SortedByDate %>
+                        <li class="$SortedByDate">$SortedByDate</li>
+                    <% else_if $SortedByPrice %>
+                        <li class="$SortedByPrice">$SortedByPrice</li>
+                    <% else %>
+                        <li class="Name">Name</li>
+                    <% end_if %>
                     <% loop $SortingOptions %>
-                        <li><a href="$Link">$Title</a></li>
+                        <li class="$Title"><a href="$Link">$Title</a></li>
                     <% end_loop %>
-                    <li>Current: </li>
-                     <% if $SortedByDate %>
-                <li> $SortedByDate</li>
-            <% else_if $SortedByPrice %>
-                <li> $SortedByPrice</li>
-                <% else %>
-                <li> Name </li>
-            <% end_if %>
-                    </ul>
+                </ul>
+                </div>
             </div>
 		    <div class="row">
             <% loop $PaginatedDrinks %>

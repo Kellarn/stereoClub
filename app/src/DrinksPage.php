@@ -23,12 +23,12 @@ class DrinksPage extends Page
     {
         $list = ArrayList::create();
         $list->push(ArrayData::create([
-            'Title' => 'Sort by date',
+            'Title' => 'Date',
             'Link' => $this->Link("/sortedDate"),
         ]));
 
         $list->push(ArrayData::create([
-            'Title' => 'Sort by price',
+            'Title' => 'Price',
             'Link' => $this->Link("/sortedPrice")
         ]));
         return $list;
