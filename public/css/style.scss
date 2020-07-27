@@ -1,4 +1,5 @@
 * {
+    font-family: "Roboto", sans-serif;
     font-size: 16px;
 }
 body {
@@ -225,6 +226,9 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: center;
+                @media (max-width: 992px) {
+                    height: 120px;
+                }
                 .footer-info {
                     font-size: 0.6rem;
                     margin: 0 auto;
@@ -233,6 +237,9 @@ body {
                     flex-direction: row;
                     align-items: center;
                     justify-content: center;
+                    @media (max-width: 992px) {
+                        flex-direction: column;
+                    }
                     a,
                     li {
                         font-size: 0.6rem;
