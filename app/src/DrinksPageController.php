@@ -55,7 +55,7 @@ class DrinksPageController extends PageController
             $this->drinksList,
             $this->getRequest()
         ) 
-        ->setPageLength(6)
+        ->setPageLength(9)
         ->setPaginationGetVar('s');
     }
 }
