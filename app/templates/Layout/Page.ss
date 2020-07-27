@@ -1,5 +1,6 @@
 <!-- BEGIN CONTENT -->
-<div class="content">
+<div class="MainPage__content__admin">
+	<a class="back-arrow" href="$BaseUrl"><i class="fa fa-arrow-left"></i>Back to startpage</a>
 	<div class="container">
 		<div class="row">
 			<div class="main col-12">	

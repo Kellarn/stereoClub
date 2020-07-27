@@ -193,6 +193,31 @@ body {
                     }
                 }
             }
+            &__admin {
+                margin-top: 40px;
+                .message {
+                    width: 400px;
+                    margin: 10px auto;
+                }
+                .back-arrow {
+                    position: absolute;
+                    left: 20px;
+                    font-size: 20px;
+                    color: white;
+                    z-index: 10;
+                    i {
+                        margin-right: 10px;
+                    }
+                }
+                .btn-toolbar {
+                    display: flex;
+                    flex-direction: column;
+                    .action {
+                        width: 150px;
+                        margin: 10px auto;
+                    }
+                }
+            }
         }
         &__bottom {
             img {
